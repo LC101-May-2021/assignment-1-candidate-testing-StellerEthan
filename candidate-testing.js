@@ -41,25 +41,27 @@ function gradeQuiz(candidateAnswers) {
 
 
     // Calculating Number of correct answers
- for (i=0; i < correctAnswers.length; i++){
-     correctAnswers[i] = (String(correctAnswers[i]))
-     candidateAnswers[i] = candidateAnswers[i].toLowerCase()
-     correctAnswers[i] = correctAnswers[i].toLowerCase()
-    if (candidateAnswers[i] === correctAnswers[i]){
-        numCorrect = numCorrect + 1;
-    }
- }
-
 //  for (i=0; i < correctAnswers.length; i++){
-//     if (candidateAnswers[i].toLowerCase === (String(correctAnswers[i])).toLowerCase){
+//      correctAnswers[i] = (String(correctAnswers[i]))
+//      candidateAnswers[i] = candidateAnswers[i].toLowerCase()
+//      correctAnswers[i] = correctAnswers[i].toLowerCase()
+//     if (candidateAnswers[i] === correctAnswers[i]){
 //         numCorrect = numCorrect + 1;
 //     }
 //  }
+
+ for (i=0; i < correctAnswers.length; i++){
+    if (candidateAnswers[i].toLowerCase() === (String(correctAnswers[i])).toLowerCase()){
+        numCorrect = numCorrect + 1;
+    }
+ }
 
     // Find percentage
 let grade = (numCorrect / correctAnswers.length )*100
  
 return grade;
+
+
 }
 
 function runProgram() {
@@ -79,6 +81,7 @@ let passFail = function(i){
         return "FAILED"
     }
 }
+
 console.log(`Candidate Name: ${candidateName}
 1) ${questions[0]}
 Your Answer: ${candidateAnswers[0]}
