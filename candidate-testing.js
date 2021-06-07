@@ -57,24 +57,9 @@ function gradeQuiz(candidateAnswers) {
  }
 
     // Find percentage
-let grade = (numCorrect / 5 )*100
- 
-return grade;
+let grade = (numCorrect / correctAnswers.length )*100
 
-
-}
-
-function runProgram() {
-  askForName();
-  // TODO 1.1c: Ask for candidate's name //
-  console.log(`Hello ${candidateName}`)
-  askQuestion();
-  gradeQuiz(this.candidateAnswers);
-  // Output Results
-
-
-
-let passFail = function(i){
+ let passFail = function(i){
     if (i >= 80){
         return "PASSED"
     } else {
@@ -106,6 +91,22 @@ Correct Answer: ${correctAnswers[4]}
 >>> Overall Grade: ${grade}% (${numCorrect} out of 5 responses correct) <<<
 >>> Status: ${passFail(grade)} <<<
 `)
+
+return grade;
+
+
+}
+
+function runProgram() {
+  askForName();
+  // TODO 1.1c: Ask for candidate's name //
+  console.log(`Hello ${candidateName}`)
+  askQuestion();
+  gradeQuiz(this.candidateAnswers);
+  // Output Results
+
+
+
 
 }
 // Don't write any code below this line //
