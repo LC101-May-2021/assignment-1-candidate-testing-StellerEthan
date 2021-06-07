@@ -72,7 +72,7 @@ function runProgram() {
   gradeQuiz(this.candidateAnswers);
   // Output Results
 
-let grade = (numCorrect / correctAnswers.length )*100
+
 
 let passFail = function(i){
     if (i >= 80){
