@@ -72,6 +72,8 @@ let passFail = function(i){
         return "FAILED"
     }
 }
+
+correctAnswers= ["Sally Ride", "true", 40, "Trajectory", 3];
 console.log(`Candidate Name: ${candidateName}
 1) ${questions[0]}
 Your Answer: ${candidateAnswers[0]}
