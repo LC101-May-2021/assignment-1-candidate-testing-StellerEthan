@@ -57,7 +57,7 @@ function gradeQuiz(candidateAnswers) {
  }
 
     // Find percentage
-let grade = (numCorrect / correctAnswers.length )*100
+let grade = (numCorrect / 5 )*100
  
 return grade;
 
