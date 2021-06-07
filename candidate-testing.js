@@ -49,6 +49,13 @@ function gradeQuiz(candidateAnswers) {
         numCorrect = numCorrect + 1;
     }
  }
+
+//  for (i=0; i < correctAnswers.length; i++){
+//     if (candidateAnswers[i].toLowerCase === (String(correctAnswers[i])).toLowerCase){
+//         numCorrect = numCorrect + 1;
+//     }
+//  }
+
     // Find percentage
 let grade = (numCorrect / correctAnswers.length )*100
  
@@ -72,8 +79,6 @@ let passFail = function(i){
         return "FAILED"
     }
 }
-
-correctAnswers= ["Sally Ride", "true", 40, "Trajectory", 3];
 console.log(`Candidate Name: ${candidateName}
 1) ${questions[0]}
 Your Answer: ${candidateAnswers[0]}
@@ -96,7 +101,7 @@ Your Answer: ${candidateAnswers[4]}
 Correct Answer: ${correctAnswers[4]}
 
 >>> Overall Grade: ${grade}% (${numCorrect} out of 5 responses correct) <<<
->>> Status: ${passFail(grade)}
+>>> Status: ${passFail(grade)} <<<
 `)
 
 }
