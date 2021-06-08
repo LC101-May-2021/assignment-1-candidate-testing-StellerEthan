@@ -51,7 +51,7 @@ function gradeQuiz(candidateAnswers) {
     // Find percentage
 let percentageGrade = (numCorrect/correctAnswers.length)*100
 
-let grade = numCorrect
+let grade = (numCorrect/correctAnswers.length)*100
 
  let passFail = function(i){
     if (i >= 80){
@@ -97,11 +97,6 @@ function runProgram() {
   console.log(`Hello ${candidateName}`)
   askQuestion();
   gradeQuiz(this.candidateAnswers);
-  // Output Results
-
-
-
-
 }
 // Don't write any code below this line //
 // And don't change these or your program will not run as expected //
