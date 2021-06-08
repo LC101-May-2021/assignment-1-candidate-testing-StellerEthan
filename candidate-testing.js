@@ -48,9 +48,7 @@ function gradeQuiz(candidateAnswers) {
  }
 
     // Find percentage
-let percentageGrade = (numCorrect/correctAnswers.length)*100
-
-let grade = numCorrect
+let grade = (numCorrect/correctAnswers.length)*100
 
  let passFail = function(i){
     if (i >= 80){
@@ -81,8 +79,8 @@ Correct Answer: ${correctAnswers[3]}
 Your Answer: ${candidateAnswers[4]}
 Correct Answer: ${correctAnswers[4]}
 
->>> Overall Grade: ${percentageGrade}% (${numCorrect} out of 5 responses correct) <<<
->>> Status: ${passFail( percentageGrade )} <<<
+>>> Overall Grade: ${grade}% (${numCorrect} out of 5 responses correct) <<<
+>>> Status: ${passFail( grade )} <<<
 `)
 
 return grade;
