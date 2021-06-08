@@ -88,7 +88,7 @@ Correct Answer: ${correctAnswers[4]}
 
 return grade;
 
-
+numCorrect=0;
 }
 
 function runProgram() {
