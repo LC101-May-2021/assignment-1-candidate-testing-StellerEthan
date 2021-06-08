@@ -51,7 +51,7 @@ function gradeQuiz(candidateAnswers) {
     // Find percentage
 let percentageGrade = (numCorrect/correctAnswers.length)*100
 
-let grade = (numCorrect/correctAnswers.length)
+let grade = numCorrect
 
  let passFail = function(i){
     if (i >= 80){
